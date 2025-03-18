@@ -1,15 +1,16 @@
 "use client";
 import WorldMap from "@/components/ui/world-map";
 import { motion } from "motion/react";
+import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 
 export function WorldMapComponent() {
   return (
     <div className="bg-white dark:bg-black py-16 w-full">
       <div className="mx-auto max-w-7xl text-center">
         <p className="font-bold text-black dark:text-white text-xl md:text-4xl">
-          Remote{" "}
+          World{" "}
           <span className="text-neutral-400">
-            {"Connectivity".split("").map((word, idx) => (
+            {"Map".split("").map((word, idx) => (
               <motion.span
                 key={idx}
                 className="inline-block"
@@ -29,6 +30,12 @@ export function WorldMapComponent() {
           analyze, and make informed decisions with ease!
         </p>
       </div>
+      <a
+        href="https://gis-starter-ekaputra.vercel.app/sign-in"
+        className="flex justify-center mx-auto my-16 w-full"
+      >
+        <InteractiveHoverButton>Go to Main Site</InteractiveHoverButton>
+      </a>
       <WorldMap
         dots={[
           {
